@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/constants/colors.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   int count = 0;
 
   @override
@@ -24,23 +25,31 @@ class _MyAppState extends State<MyApp> {
           centerTitle: true,
           backgroundColor: Colors.blueGrey,
           leading: Text("Menu"),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(count.toString()),
+              Text("Flutter Tutorial", 
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.w300,
+                letterSpacing: 10,
+                color: HexColor(pink),
+              )),
+            ],
           ),
-          body: Center(
-            child: Text(count.toString()),
-          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed:() {
-              setState(() {
-                count +=1;
-              });
-            },
-            child: Text("+"),
-          ),
-      )
-      );
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              count += 1;
+            });
+          },
+          child: Text("+"),
+        ),
+      ),
+    );
   }
 }
-
-
-
-

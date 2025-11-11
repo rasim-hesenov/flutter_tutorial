@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/constants/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(textTheme: GoogleFonts.acmeTextTheme()),
       home: Scaffold(
         appBar: AppBar(
           title: Text("MyApp"),
@@ -32,13 +34,19 @@ class _MyAppState extends State<MyApp> {
             children: [
               Text(count.toString()),
               Text("Flutter Tutorial", 
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.w300,
-                letterSpacing: 10,
-                color: HexColor(pink),
-              )),
-            ],
+              style: GoogleFonts.acme(
+                fontSize: 40,
+                color: HexColor(darkBlue)
+              )
+              // style: TextStyle(
+              //   fontFamily: "PoppinsFont",
+              //   fontSize: 28,
+              //   fontWeight: FontWeight.w300,
+              //   letterSpacing: 5,
+              //   backgroundColor: HexColor(darkBlue),
+              //   color: HexColor(yellow),
+              // )),
+          )],
           ),
         ),
         floatingActionButton: FloatingActionButton(

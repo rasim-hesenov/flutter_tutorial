@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hexcolor/hexcolor.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -29,25 +28,7 @@ class _MyAppState extends State<MyApp> {
           leading: Text("Menu"),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(count.toString()),
-              Text("Flutter Tutorial", 
-              style: GoogleFonts.acme(
-                fontSize: 40,
-                color: HexColor(darkBlue)
-              )
-              // style: TextStyle(
-              //   fontFamily: "PoppinsFont",
-              //   fontSize: 28,
-              //   fontWeight: FontWeight.w300,
-              //   letterSpacing: 5,
-              //   backgroundColor: HexColor(darkBlue),
-              //   color: HexColor(yellow),
-              // )),
-          )],
-          ),
+          child: Image.asset("lib/assets/images/coder-in-dubai.png")
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {

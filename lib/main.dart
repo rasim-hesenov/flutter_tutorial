@@ -22,14 +22,20 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(textTheme: GoogleFonts.acmeTextTheme()),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("MyApp"),
+          title: Text("Test App"),
           centerTitle: true,
           backgroundColor: Colors.blueGrey,
           leading: Text("Menu"),
         ),
-        body: Center(
-          child: Image.asset("lib/assets/images/coder-in-dubai.png")
+         body: Container(
+          margin: EdgeInsets.all(20.0),
+          padding: EdgeInsets.fromLTRB(40, 20, 40, 20),
+          color: Colors.cyan,
+          child: Text("TEST"),
         ),
+        // Center(
+        //   child: Image.asset("lib/assets/images/coder-in-dubai.png")
+        // ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
